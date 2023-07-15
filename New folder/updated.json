@@ -1,0 +1,21 @@
+{
+  "coord": { "lon": 72.8479, "lat": 19.0144 },
+
+  "main": {
+    "temp": 305.14,
+    "feels_like": 312.14,
+    "temp_min": 305.09,
+    "temp_max": 305.14,
+    "pressure": 1003,
+    "humidity": 70
+  },
+  "visibility": 5000,
+  "wind": { "speed": 4.12, "deg": 240, "gust": 9.26 },
+  "clouds": { "all": 40 },
+
+  "sys": {
+    "country": "IN"
+  },
+
+  "name": "Mumbai"
+}

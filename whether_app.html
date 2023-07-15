@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./whether_app.css" />
+    <!-- searchbox file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-div">
+        <div class="box" id="mainleft">
+          <div class="city-country">
+            <p id="citynameid">khatima</p>
+            <p id="countryid">in</p>
+          </div>
+          <div class="timebox">
+            <div class="datebox">
+              <p><span id="hourid">20</span></p>
+              <p>:</p>
+              <p><span id="minutesid">14</span></p>
+            </div>
+            <div class="day-monthbox">
+              <span id="dayid">friday</span>
+              <span>,</span>
+              <span id="dateid">16</span>
+              <span id="monthid">jan</span>
+            </div>
+          </div>
+        </div>
+        <div class="box" id="maininfo">
+          <!-- searchbox div -->
+          <div class="formcontainer">
+            <form id="searchbox">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="search any city"
+                autocomplete="off" />
+              <button id="btn1">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #ffffff"></i>
+              </button>
+            </form>
+          </div>
+          <!-- whether img with case box -->
+          <div id="whethercase">
+            <img src="" id="caseimg" />
+            <div id="casetxt">haze</div>
+          </div>
+          <div class="infocontainer">
+            <div class="temp">
+              <div class="tempbox" id="temp-1">temperature</div>
+              <div class="tempbox" id="temp-2">
+                <span id="main_tempid">26</span>°c
+              </div>
+            </div>
+            <div class="min-max-container">
+              <div class="min-max-temp-box" id="min-temp">
+                <p class="min-max-h">min temp</p>
+                <p class="temp-value" id="min-temp-value">
+                  <span id="min_tempid">24</span>°c
+                </p>
+              </div>
+              <div class="min-max-temp-box" id="max-temp">
+                <p class="min-max-h">max temp</p>
+                <p class="temp-value" id="max-temp-value">
+                  <span id="max_tempid">32</span>°c
+                </p>
+              </div>
+            </div>
+            <!-- closing of min-max-container -->
+          </div>
+          <!-- closing of infocontainer -->
+          <div class="other-info">
+            <p class="info-class">
+              <span>Wind speed -</span><span id="speedid">5</span
+              ><span class="units">m / s</span>
+            </p>
+            <p class="info-class">
+              <span> Visibility -</span><span id="visibilityid">2</span
+              ><span class="units">km</span>
+            </p>
+            <p class="info-class">
+              <span>Humidity -</span><span id="humidityid">36</span
+              ><span class="units">%</span>
+            </p>
+            <p class="info-class">
+              <span>Pressure -</span><span id="pressureid">1300</span
+              ><span class="units">hpa</span>
+            </p>
+          </div>
+        </div>
+
+        <!--closing of maininfo-->
+      </div>
+      <!--closing of content-div&-->
+    </div>
+    <!--closing of container -->
+  </body>
+  <script src="whether_app.js"></script>
+</html>
