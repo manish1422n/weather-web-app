@@ -140,8 +140,7 @@ body {
 #caseimg {
   width: 122px;
   height: 117px;
-  border: 2px solid black;
-  /* margin-top: 20px; */
+  border-radius: 3px;
 }
 #casetxt {
   width: 100%;
