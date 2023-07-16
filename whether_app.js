@@ -1,8 +1,6 @@
 // 72bf5c4e77a1b5f99079bd22c5b79725     pawan key
 
-//  https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=72bf5c4e77a1b5f99079bd22c5b79725
-
-/*https://api.openweathermap.org/data/2.5/weather?lat=57&lon=-2.15&appid={API key}&units=metric  for temp in celsius */
+// https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}&units=metric
 
 let timebox = () => {
   const fulldate = new Date();
@@ -23,29 +21,6 @@ let timebox = () => {
     "friday",
     "saturday",
   ];
-  // switch (days) {
-  //   case 0:
-  //     day = "sunday";
-  //     break;
-  //   case 1:
-  //     day = "monday";
-  //     break;
-  //   case 2:
-  //     day = "tuesday";
-  //     break;
-  //   case 3:
-  //     day = "wednesday";
-  //     break;
-  //   case 4:
-  //     day = "thursday";
-  //     break;
-  //   case 5:
-  //     day = "friday";
-  //     break;
-  //   case 6:
-  //     day = "saturday";
-  //     break;
-  // }
 
   dayid.innerHTML = arr[days];
 
@@ -53,45 +28,22 @@ let timebox = () => {
   dateid.innerHTML = date;
 
   const months = fulldate.getMonth();
-  switch (months) {
-    case 0:
-      month = "january";
-      break;
-    case 1:
-      month = "february";
-      break;
-    case 2:
-      month = "march";
-      break;
-    case 3:
-      month = "april";
-      break;
-    case 4:
-      month = "may";
-      break;
-    case 5:
-      month = "june";
-      break;
-    case 6:
-      month = "july";
-      break;
-    case 7:
-      month = "august";
-      break;
-    case 8:
-      month = "september";
-      break;
-    case 9:
-      month = "october";
-      break;
-    case 10:
-      month = "november";
-      break;
-    case 11:
-      month = "december";
-      break;
-  }
-  monthid.innerHTML = month;
+  const arr2 = [
+    "january",
+    "february",
+    "march",
+    "april",
+    "may",
+    "june",
+    "july",
+    "august",
+    "september",
+    "october",
+    "november",
+    "december",
+  ];
+
+  monthid.innerHTML = arr2[months];
 };
 
 timebox_interval = setInterval(timebox, 1000);
@@ -114,12 +66,13 @@ btn.addEventListener("click", (e) => {
       let icon = data.weather[0].icon;
       console.log(icon);
 
-      const haze = "./imges/haze.svg";
-      const clear = "./imges/clear.svg";
-      const cloud = "./imges/cloud.svg";
-      const rain = "./imges/rain.svg";
-      const snow = "./imges/snow.svg";
-      const storm = "./imges/storm.svg";
+      const haze = "./haze.svg";
+      const clear = "./clear.svg";
+      const cloud = "./cloud.svg";
+      const rain = "./rain.svg";
+      const snow = "./snow.svg";
+      const storm = "./storm.svg";
+      const def_img = "./defimg.jpg.";
 
       if (id == 800) {
         caseimg.src = clear;
@@ -134,7 +87,7 @@ btn.addEventListener("click", (e) => {
       } else if ((id >= 300 && id <= 321) || (id >= 500 && id <= 531)) {
         caseimg.src = rain;
       } else {
-        caseimg.src = ``;
+        caseimg.src = def_img;
       }
     }
 
